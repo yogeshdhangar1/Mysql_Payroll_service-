@@ -1,15 +1,21 @@
- alter table emp_service add column gender varchar(10);
-Query OK, 0 rows affected (0.14 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-
 mysql> select * from emp_service;
 +------+----------+--------+------+--------+
 | Id   | name     | salary | Date | gender |
 +------+----------+--------+------+--------+
-|  112 | yogesh   |  12000 |   24 | NULL   |
-|  162 | Ashutosh |  12700 |   28 | NULL   |
-|  163 | Ketan    |  12770 |   26 | NULL   |
-|  123 | Bhavesh  |  12780 |   75 | NULL   |
-|  162 | Ashutosh |  12700 |    0 | NULL   |
+|  112 | yogesh   |  12000 |   24 | male   |
+|  162 | Ashutosh |  12700 |   28 | male   |
+|  163 | Ketan    |  12770 |   26 | male   |
+|  123 | Bhavesh  |  12780 |   75 | male   |
+|  162 | Ashutosh |  12700 |    0 | male   |
 +------+----------+--------+------+--------+
 5 rows in set (0.00 sec)
+
+mysql> select sum(salary) from emp_payroll where gender ='male' group by gender;
+ERROR 1146 (42S02): Table 'payroll_servicedb.emp_payroll' doesn't exist
+mysql> select sum(salary) from emp_service where gender ='male' group by gender;
++-------------+
+| sum(salary) |
++-------------+
+|       62950 |
++-------------+
+1 row in set (0.00 sec)
