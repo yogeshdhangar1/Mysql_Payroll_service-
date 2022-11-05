@@ -1,41 +1,15 @@
-+------+----------------+--------+------------+
-| id   | name           | salary |    Date
-+------+----------------+--------+------------+
-|  112 | yogesh         | 12000  | 2020-07-22 |
-|  162 | Ashutosh       | 12700  | 2020-04-18 |
-|  163 | Ketan          | 12770  | 2021-07-11 |
-+------+----------------+--------+------------+
-3 rows in set (0.00 sec)
+ alter table emp_service add column gender varchar(10);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
 
-mysql>
-mysql> select salary from employee_payroll where name='yogesh';
-+--------+
-| salary |
-+--------+
-| 12000 |
-+--------+
-1 row in set (0.00 sec)
-
-mysql> select salary from employee_payroll where name='ketan';
-+--------+
-| salary |
-+--------+
-|  12770
-+--------+
-1 row in set (0.00 sec)
-
-mysql> select Date from employee_payroll where name='ketan';
-+------------+
-| Date |
-+------------+
-| 2021-07-11 |
-+------------+
-1 row in set (0.00 sec)
-
-mysql> select date from employee_payroll where name='yogesh';
-+------------+
-| Date 
-+------------+
-| 2020-07-18 |
-+------------+
-1 row in set (0.00 sec)
+mysql> select * from emp_service;
++------+----------+--------+------+--------+
+| Id   | name     | salary | Date | gender |
++------+----------+--------+------+--------+
+|  112 | yogesh   |  12000 |   24 | NULL   |
+|  162 | Ashutosh |  12700 |   28 | NULL   |
+|  163 | Ketan    |  12770 |   26 | NULL   |
+|  123 | Bhavesh  |  12780 |   75 | NULL   |
+|  162 | Ashutosh |  12700 |    0 | NULL   |
++------+----------+--------+------+--------+
+5 rows in set (0.00 sec)
