@@ -1,11 +1,41 @@
++------+----------------+--------+------------+
+| id   | name           | salary |    Date
++------+----------------+--------+------------+
+|  112 | yogesh         | 12000  | 2020-07-22 |
+|  162 | Ashutosh       | 12700  | 2020-04-18 |
+|  163 | Ketan          | 12770  | 2021-07-11 |
++------+----------------+--------+------------+
+3 rows in set (0.00 sec)
 
-mysql> select * from emp_service;
-+------+----------+--------+------+
-| Id   | name     | salary | Date |
-+------+----------+--------+------+
-|  112 | yogesh   |  12000 |   24 |
-|  162 | Ashutosh |  12700 |   28 |
-|  163 | Ketan    |  12770 |   26 |
-|  123 | Bhavesh  |  12780 |   75 |
-+------+----------+--------+------+
-4 rows in set (0.00 sec)
+mysql>
+mysql> select salary from employee_payroll where name='yogesh';
++--------+
+| salary |
++--------+
+| 12000 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select salary from employee_payroll where name='ketan';
++--------+
+| salary |
++--------+
+|  12770
++--------+
+1 row in set (0.00 sec)
+
+mysql> select Date from employee_payroll where name='ketan';
++------------+
+| Date |
++------------+
+| 2021-07-11 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select date from employee_payroll where name='yogesh';
++------------+
+| Date 
++------------+
+| 2020-07-18 |
++------------+
+1 row in set (0.00 sec)
