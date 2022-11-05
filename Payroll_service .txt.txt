@@ -1,15 +1,23 @@
 
-mysql> use payroll_service;
-ERROR 1049 (42000): Unknown database 'payroll_service'
-mysql> use payroll_servicedb;
-Database changed
-mysql> desc emp_service;
-+--------+-------------+------+-----+---------+-------+
-| Field  | Type        | Null | Key | Default | Extra |
-+--------+-------------+------+-----+---------+-------+
-| Id     | int         | YES  |     | NULL    |       |
-| name   | varchar(10) | YES  |     | NULL    |       |
-| salary | int         | YES  |     | NULL    |       |
-| Date   | int         | YES  |     | NULL    |       |
-+--------+-------------+------+-----+---------+-------+
+mysql> insert into emp_service values(112,'yogesh',12000,2020/07/12);
+Query OK, 1 row affected (0.23 sec)
+
+mysql> insert into emp_service values(162,'Ashutosh',12700,2020/4/18);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into emp_service values(163,'Ketan',12770,2021/7/11);
+Query OK, 1 row affected (0.62 sec)
+
+mysql> insert into emp_service values(123,'Bhavesh',12780,2021/3/9);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from emp_service;
++------+----------+--------+------+
+| Id   | name     | salary | Date |
++------+----------+--------+------+
+|  112 | yogesh   |  12000 |   24 |
+|  162 | Ashutosh |  12700 |   28 |
+|  163 | Ketan    |  12770 |   26 |
+|  123 | Bhavesh  |  12780 |   75 |
++------+----------+--------+------+
 4 rows in set (0.00 sec)
